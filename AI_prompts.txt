@@ -1,0 +1,84 @@
+AI Prompts for Code Generation and Debugging Assistant
+=====================================================
+
+This file contains three practical prompts used in the project to demonstrate
+how Generative AI (ChatGPT or OpenCode) can help with code generation,
+explanation, and debugging.
+
+---------------------------------------------------------------------
+
+Prompt 1 — Code Generation:
+---------------------------------------------------------------------
+"Act as an experienced Python programming instructor. Write a complete,
+well-commented Python program that:
+1. Accepts a string from the user via input()
+2. Reverses the string using Python slicing (input_str[::-1])
+3. Checks whether the input string is a palindrome (reads the same
+   forward and backward, ignoring case)
+4. Displays clear, beginner-friendly output showing the original string,
+   the reversed string, and whether it is a palindrome
+5. Handles empty input gracefully without crashing
+
+The program should use at least two functions: one for reversing the string
+and one for checking the palindrome condition. Include example outputs
+demonstrating with at least three test cases: 'madam' (palindrome),
+'hello' (not a palindrome), and 'level' (palindrome).
+
+Write the code in a single file called 'main.py'. The code should use only
+Python standard library (no external packages). Include a if __name__
+== '__main__' block so the program runs when executed directly."
+
+---------------------------------------------------------------------
+
+Prompt 2 — Code Explanation:
+---------------------------------------------------------------------
+"Act as a patient programming tutor. Explain the Python program designed
+for string reversal and palindrome checking, as taught in an MCA Generative
+AI Lab practical. Provide a beginner-friendly explanation covering:
+
+1. How Python string slicing works with [::-1] to reverse a string
+2. The purpose and structure of functions in Python (def keyword, return
+   statement, function parameters)
+3. How the palindrome condition works (comparing a string with its reverse)
+4. What case-insensitive means and why we use .lower() before comparison
+5. How the program handles empty input (the if not input_str check)
+6. The complete program logic from start to finish, line by line
+
+Use simple language suitable for someone new to programming. Include
+code snippets illustrating each concept. Write the explanation in a
+Markdown-formatted document."
+
+---------------------------------------------------------------------
+
+Prompt 3 — Debugging:
+---------------------------------------------------------------------
+"Act as a helpful programming assistant. I have a Python program that is
+supposed to reverse a string and check if it's a palindrome, but it has
+a bug. The bug is that the is_palindrome function compares the original
+string directly with its reverse without converting to lowercase first.
+
+The faulty code is in a file called 'buggy_version.py'. Here is the
+relevant function:
+
+    def is_palindrome(input_str):
+        reversed_str = input_str[::-1]
+        is_pal = (input_str == reversed_str)  # BUG: case-sensitive
+        return is_pal
+
+When I run this program and enter 'MADAM', it incorrectly says 'MADAM'
+is NOT a palindrome, even though it reads the same forward and backward
+when case is ignored.
+
+Please:
+1. Identify the bug and explain its cause in simple terms
+2. Provide the corrected code for the is_palindrome function
+3. Show the successful output when entering 'MADAM' after the fix
+4. Suggest one simple test case the user can run to verify the fix works
+
+Write the response in a clear, structured format suitable for a student
+learning debugging techniques with Generative AI assistance."
+
+---------------------------------------------------------------------
+
+These prompts were generated as part of an MCA Generative AI Lab practical
+examination on AI-Powered Code Generation and Debugging Assistant.
